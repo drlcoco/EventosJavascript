@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eventos</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="estilos.css">
+  <script defer src="index.js"></script>
+</head>
+<body class="index"> 
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <a class="navbar-brand mb-3" href="portada.html">Events manager</a>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link active" href="index.html">Eventos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="nuevo-evento.html">Nuevo evento</a>
+      </li>
+      <li class="nav-item">
+        <label class="nav-link active">Ordena por</label>
+      </li>
+      <li class="nav-item mt-2">
+        <select class="form-select " id="select">
+          <option class="nav-link" value="seleccion">Selección</option>
+          <option class="nav-link" value="alfabetNombre">Alfabético (Nombre)</option>
+          <option class="nav-link" value="alfabetDescripcion">Alfabético (Descripción)</option>
+          <option class="nav-link" value="fecha">Fecha</option>
+          <option class="nav-link" value="precioAscendente">Precio ascendente</option>
+          <option class="nav-link" value="precioDescendente">Precio descendente</option>
+        </select>
+      </li>
+      <li class="nav-item">
+        <label class="nav-link active" id="hora"></label>
+      </li>
+      <li class="nav-item">
+        <label class="nav-link active" id="busca">Buscar por título: <input type="text" id="input"></label>
+      </li>
+      <li class="nav-item">
+        <button class= "btn btn-info btn-lg btn-block" id="filtrar">Filtrar</button>
+      </li>
+    </ul>
+  </nav>
+  <div class="container">
+    <div class="row mt-3" id="eventos"></div>
+  </div>
+</body>
+</html>
